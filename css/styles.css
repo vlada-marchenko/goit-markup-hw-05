@@ -787,22 +787,25 @@ input {
 
 }
 
-.input-mark {   
+
+/* .input-mark {   
    width: 16px;
    height: 16px;
    border: 1px solid rgba(46, 47, 66, 0.4);
    border-radius: 2px;
 
 }
+*/
 
 
 
 
 
-.input-mark:checked + .checkbox { 
-     background: #404BBF; 
-     border: 1px solid #404BBF; 
-     fill: #ffffff;
+.input-mark:checked + .input-label > .checkbox{ 
+    background-color: #404BBF; 
+    border: none;  
+    fill: #FFFFFF; 
+    border-color: #404BBF; 
 }
 
 .mark-link {    
