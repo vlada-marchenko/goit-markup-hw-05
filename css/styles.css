@@ -693,10 +693,9 @@ padding-left: 16px;
     border: none;
 }
 
-.window-x:hover + .icon-close, .window-x:focus + .icon-close  {
-    fill:#ffffff;
+.window-x:hover, .window-x:focus + .icon-close {
+    fill: #ffffff;
 }
-
 
 
 
