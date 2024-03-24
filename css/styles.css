@@ -648,8 +648,7 @@ padding-left: 16px;
     height: 100%;
     width: 100%;
     background: rgba(46, 47, 66, 0.4);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2); 
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 
 }
 
@@ -662,10 +661,10 @@ padding-left: 16px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); 
     visibility: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 72px 24px 24px 24px; 
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -684,32 +683,25 @@ padding-left: 16px;
     padding: 0;
     cursor: pointer; 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-
+    top: 24px;
 }
 
 .window-x:hover {
     background-color: #404bbf;
     border: none;
+    fill: #ffffff
 
 }
 
 .window-x:focus {
     background-color: #404bbf;
     border: none;
-}
-
-.icon-close:hover {
-    fill: #ffffff;
-}
-
-.icon-close:focus {
     fill: #ffffff
 }
 
-.icon-close {
-    stroke: #2E2F42;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-}
+
+
+
 
 
 .window-title {
@@ -719,7 +711,6 @@ padding-left: 16px;
     text-align: center;
     letter-spacing: 0.02em;
     color: #2E2F42;
-    margin-top: 48px;
     margin-bottom: 16px; 
 }
 
@@ -748,23 +739,34 @@ padding-left: 16px;
   padding-left: 38px;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+  left: 16px;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 .window-send {
     padding: 16px 32px;
     gap: 10px;
-    background: #4D5AE5;
+    background-color: #4D5AE5;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    width: 169px;
+    min-width: 169px;
     height: 56px;
     color: #FFFFFF;
     left: 50%;
     transform: translateX(50%);
     bottom: 0;
     margin-top: 24px;
+    display: block;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .input-label {
@@ -791,8 +793,8 @@ padding-left: 16px;
 
 .icon-contacts {
     position: absolute;
-    left: 19px;
-    top: 50%;
+    left: 16px;
+    
 }
 
 .input-contacts:focus {
@@ -815,6 +817,19 @@ padding-left: 16px;
     margin-top: 4px;
     position: relative;
     resize: none;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    background-color: transparent;
+    padding: 8px 16px; 
+    outline: transparent; 
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.input-comment:focus {
+    border-color: #4D5AE5; 
 }
 
 .input-container-comment {
@@ -822,16 +837,14 @@ padding-left: 16px;
     margin-bottom: 16px;
 }
 
-.input-comment::placeholder {
+/*.input-comment::placeholder {
    font-weight: 400;
    font-size: 12px;
    line-height: 14px;
    letter-spacing: 0.04em;
    color: rgba(46, 47, 66, 0.4);
-   position: absolute ;
-   padding-left: 16px;
-   padding-top: 8px;
 }
+*/
 
 input {
     font-family: inherit;
@@ -840,10 +853,9 @@ input {
 .mark-text {
    font-weight: 400;
    font-size: 12px;
-   line-height: 14px;
    letter-spacing: 0.04em;
    color: #8E8F99;
-
+   line-height: 1.17; 
 }
 
 
@@ -856,14 +868,16 @@ input {
 }
 */
 
-
+.mark-container {
+    margin-bottom: 24px;
+}
 
 
 
 .input-mark:checked + .mark-text > .checkbox{ 
     background-color: #404BBF; 
     border: none;  
-    fill: #FFFFFF; 
+    fill: #F4F4FD;
     border-color: #404BBF; 
 }
 
@@ -886,4 +900,8 @@ input {
     fill: transparent;
     position: relative;
     margin-right: 8px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
