@@ -639,7 +639,7 @@ padding-left: 16px;
 .icon-send {
     fill: #ffffff;
     margin-left: 16px;
-    
+
 }
 
 .overlay {
@@ -648,6 +648,9 @@ padding-left: 16px;
     height: 100%;
     width: 100%;
     background: rgba(46, 47, 66, 0.4);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2); 
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .window {
@@ -659,7 +662,10 @@ padding-left: 16px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 24px;
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    visibility: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 72px 24px 24px 24px; 
 }
 
 
@@ -672,20 +678,37 @@ padding-left: 16px;
     background: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
     right: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    cursor: pointer; 
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 
 }
 
 .window-x:hover {
-    background: #404BBF;
+    background-color: #404bbf;
+    border: none;
+
+}
+
+.window-x:focus {
+    background-color: #404bbf;
+    border: none;
 }
 
 .icon-close:hover {
     fill: #ffffff;
 }
 
+.icon-close:focus {
+    fill: #ffffff
+}
+
 .icon-close {
     stroke: #2E2F42;
-
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 
@@ -697,6 +720,7 @@ padding-left: 16px;
     letter-spacing: 0.02em;
     color: #2E2F42;
     margin-top: 48px;
+    margin-bottom: 16px; 
 }
 
 .window-input {
@@ -721,6 +745,9 @@ padding-left: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   margin-bottom: 8px;
   margin-top: 4px;
+  padding-left: 38px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -747,11 +774,18 @@ padding-left: 16px;
     letter-spacing: 0.04em;
     color: #8E8F99;
     display: block;
+    line-height: 1.17;
+    margin-bottom: 4px;
 }
 
+.contacts-container {
+    position: relative;
+
+}
 
 .input-container {
     position: relative;
+    margin-bottom: 8px;
 }
 
 
@@ -763,6 +797,10 @@ padding-left: 16px;
 
 .input-contacts:focus {
     border-color: #4D5AE5;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%); 
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .input-contacts:focus + .icon-contacts {
