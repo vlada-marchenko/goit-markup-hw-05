@@ -648,7 +648,7 @@ padding-left: 16px;
     height: 100%;
     width: 100%;
     background: rgba(46, 47, 66, 0.4);
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 
 }
 
@@ -701,7 +701,9 @@ padding-left: 16px;
 
 
 
-
+.icon-close {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 
 .window-title {
@@ -741,7 +743,6 @@ padding-left: 16px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   left: 16px;
   transform: translateY(-50%);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -780,10 +781,6 @@ padding-left: 16px;
     margin-bottom: 4px;
 }
 
-.contacts-container {
-    position: relative;
-
-}
 
 .input-container {
     position: relative;
@@ -794,7 +791,9 @@ padding-left: 16px;
 .icon-contacts {
     position: absolute;
     left: 16px;
-    
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-contacts:focus {
