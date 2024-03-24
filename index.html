@@ -352,16 +352,17 @@
           </div>
           <div class="email-input">
             <p class="input-title">Subscribe</p>
-            
-                <input class="input-footer" type="text" placeholder="E-mail">
+                <form action="" class="footer-form">
+                   <label for="input-footer"></label>
+                   <input class="input-footer" id="input-footer" type="email" placeholder="E-mail">
                 
-                <button class="input-button">
+                   <button class="input-button" type="submit">
                         <span>Subscribe</span> 
                         <svg class="icon-send" width="24" height="24">
                             <use href="./images/icons_1.svg#icon-send"></use>
                         </svg>
-                </button>
-           
+                   </button>
+                </form>
           </div>
        </div>
     </footer>
@@ -414,17 +415,22 @@
 
                 <div class="input-container-comment">
                     <label class="input-label" for="comment">Comment</label>
-                    <textarea class="input-comment" type="text" name="comment" id="comment"  placeholder="Text input"></textarea>
+                    <textarea class="input-comment" name="comment" id="comment"  placeholder="Text input"></textarea>
                 </div>
 
                 <div class="mark-container">
-                    <input class="input-mark" type="checkbox" id="checkbox">
-                    <label class="mark-text" for="checkbox">I accept the terms and conditions of the  <a class="mark-link" href="">Privacy Policy</a></label>
-                    <span class="checkbox">
-                        <svg class="checkbox-icon" width="10" height="8">
+                            
+                     <input class="input-mark visually-hidden" type="checkbox" id="checkbox">
+                     <label class="mark-text" for="checkbox"> 
+                        <span class="checkbox">
+                          <svg class="checkbox-icon" width="10" height="8">
                             <use href="./images/icons_1.svg#icon-Vector-5"></use>
-                        </svg>
-                    </span> 
+                          </svg>
+                        </span> 
+                        I accept the terms and conditions of the  <a class="mark-link" href="">Privacy Policy</a>
+                    </label>
+
+         
                 </div>
             </form>
             <button type="submit" class="window-send">Send</button>
